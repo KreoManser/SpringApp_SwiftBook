@@ -13,6 +13,7 @@
 		0A4D070E289B02940011E723 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A4D070C289B02940011E723 /* Main.storyboard */; };
 		0A4D0710289B02950011E723 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A4D070F289B02950011E723 /* Assets.xcassets */; };
 		0A4D0713289B02950011E723 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A4D0711289B02950011E723 /* LaunchScreen.storyboard */; };
+		7DCF160ECC7A4CEDCBD91422 /* Pods_SpringApp_SwiftBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C9B3DFFBA8AD1B7CAD6932 /* Pods_SpringApp_SwiftBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		0A4D070F289B02950011E723 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A4D0712289B02950011E723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A4D0714289B02950011E723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22C9B3DFFBA8AD1B7CAD6932 /* Pods_SpringApp_SwiftBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpringApp_SwiftBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C40A254DAC5CAAEE29335CE /* Pods-SpringApp_SwiftBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpringApp_SwiftBook.release.xcconfig"; path = "Target Support Files/Pods-SpringApp_SwiftBook/Pods-SpringApp_SwiftBook.release.xcconfig"; sourceTree = "<group>"; };
+		A04EC55635179206AA7D0C0C /* Pods-SpringApp_SwiftBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpringApp_SwiftBook.debug.xcconfig"; path = "Target Support Files/Pods-SpringApp_SwiftBook/Pods-SpringApp_SwiftBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DCF160ECC7A4CEDCBD91422 /* Pods_SpringApp_SwiftBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				0A4D0705289B02940011E723 /* SpringApp_SwiftBook */,
 				0A4D0704289B02940011E723 /* Products */,
+				7D49C12CC8E7AAB51CD8BC3A /* Pods */,
+				A7866B8C146626C0B64218EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = SpringApp_SwiftBook;
 			sourceTree = "<group>";
 		};
+		7D49C12CC8E7AAB51CD8BC3A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A04EC55635179206AA7D0C0C /* Pods-SpringApp_SwiftBook.debug.xcconfig */,
+				5C40A254DAC5CAAEE29335CE /* Pods-SpringApp_SwiftBook.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A7866B8C146626C0B64218EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22C9B3DFFBA8AD1B7CAD6932 /* Pods_SpringApp_SwiftBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A4D0717289B02950011E723 /* Build configuration list for PBXNativeTarget "SpringApp_SwiftBook" */;
 			buildPhases = (
+				1D53C4984A84AA1AF479D716 /* [CP] Check Pods Manifest.lock */,
 				0A4D06FF289B02940011E723 /* Sources */,
 				0A4D0700289B02940011E723 /* Frameworks */,
 				0A4D0701289B02940011E723 /* Resources */,
+				F5DEE60A9088659D5F677008 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D53C4984A84AA1AF479D716 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpringApp_SwiftBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5DEE60A9088659D5F677008 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpringApp_SwiftBook/Pods-SpringApp_SwiftBook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SpringApp_SwiftBook/Pods-SpringApp_SwiftBook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpringApp_SwiftBook/Pods-SpringApp_SwiftBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0A4D06FF289B02940011E723 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		0A4D0718289B02950011E723 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A04EC55635179206AA7D0C0C /* Pods-SpringApp_SwiftBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +379,7 @@
 		};
 		0A4D0719289B02950011E723 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C40A254DAC5CAAEE29335CE /* Pods-SpringApp_SwiftBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
